@@ -7,10 +7,10 @@ module ann_tb();
     logic clk_s = '0; 
     logic rst_n_s = '1;
 
-    logic [neuron_size-1 : 0] [word_size-1 : 0] weights_s;
-    logic [neuron_size-1 : 0] [word_size-1 : 0] x_s;
+    logic [NEURON_SIZE-1 : 0] [WORD_SIZE-1 : 0] weights_s;
+    logic [NEURON_SIZE-1 : 0] [WORD_SIZE-1 : 0] x_s;
 
-    logic [word_size-1 : 0] result_s;
+    logic [WORD_SIZE-1 : 0] result_s;
 
 /*
     ann ann(
@@ -39,7 +39,7 @@ module ann_tb();
     
     initial begin
 
-        for (int i = 0 ; i < neuron_size ; i++ ) begin
+        for (int i = 0 ; i < NEURON_SIZE ; i++ ) begin
             weights_s[i] = 2;
             x_s[i] = 1;
         end
