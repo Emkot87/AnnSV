@@ -4,6 +4,15 @@ package ann_pkg;
 
     parameter int ADDR_WIDTH = 8;
 
-    typedef enum  {APB_ACCESS, NN_ACCESS } e_state;
+    parameter int RAM_PORT   = 64;
+    parameter int RAM_WORDS  = 1024;
+
+
+    typedef enum  {
+        IDLE,
+        APB_ACCESS,
+        NN_ACCESS,
+        XXX = 'x
+    } e_state;
 
 endpackage
